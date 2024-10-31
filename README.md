@@ -41,7 +41,7 @@ Document Processor is a full-stack web application that extracts and processes i
 ### Quick Start
 1. Clone the repository
 ```bash
-git clone <repository-url>
+git clone https://github.com/SaiSatya16/Document-Processor
 cd document-processor
 ```
 

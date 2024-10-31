@@ -1,0 +1,103 @@
+{
+    "_type": "export",
+    "__export_format": 4,
+    "__export_date": "2024-10-31T10:00:00.000Z",
+    "__export_source": "insomnia.desktop.app:v8.4.5",
+    "resources": [
+      {
+        "_id": "req_health_check",
+        "parentId": "fld_document_processor",
+        "modified": 1698753600000,
+        "created": 1698753600000,
+        "url": "{{ _.base_url }}/api/health",
+        "name": "Health Check",
+        "description": "Check if the API is running",
+        "method": "GET",
+        "parameters": [],
+        "headers": [],
+        "authentication": {},
+        "metaSortKey": -1698753600000,
+        "isPrivate": false,
+        "settingStoreCookies": true,
+        "settingSendCookies": true,
+        "settingDisableRenderRequestBody": false,
+        "settingEncodeUrl": true,
+        "settingRebuildPath": true,
+        "settingFollowRedirects": "global",
+        "_type": "request"
+      },
+      {
+        "_id": "fld_document_processor",
+        "parentId": "wrk_document_processor",
+        "modified": 1698753600000,
+        "created": 1698753600000,
+        "name": "Document Processor API",
+        "description": "",
+        "environment": {},
+        "environmentPropertyOrder": null,
+        "metaSortKey": -1698753600000,
+        "_type": "request_group"
+      },
+      {
+        "_id": "wrk_document_processor",
+        "parentId": null,
+        "modified": 1698753600000,
+        "created": 1698753600000,
+        "name": "Document Processor",
+        "description": "",
+        "scope": "collection",
+        "_type": "workspace"
+      },
+      {
+        "_id": "req_process_document",
+        "parentId": "fld_document_processor",
+        "modified": 1698753600000,
+        "created": 1698753600000,
+        "url": "{{ _.base_url }}/api/process-document",
+        "name": "Process Document",
+        "description": "Upload and process a document image",
+        "method": "POST",
+        "parameters": [],
+        "headers": [],
+        "body": {
+          "mimeType": "multipart/form-data",
+          "params": [
+            {
+              "name": "document",
+              "value": "",
+              "description": "Document image file (PNG, JPG, JPEG)",
+              "type": "file",
+              "fileName": "/path/to/your/document.jpg"
+            }
+          ]
+        },
+        "authentication": {},
+        "metaSortKey": -1698753600000,
+        "isPrivate": false,
+        "settingStoreCookies": true,
+        "settingSendCookies": true,
+        "settingDisableRenderRequestBody": false,
+        "settingEncodeUrl": true,
+        "settingRebuildPath": true,
+        "settingFollowRedirects": "global",
+        "_type": "request"
+      },
+      {
+        "_id": "env_base",
+        "parentId": "wrk_document_processor",
+        "modified": 1698753600000,
+        "created": 1698753600000,
+        "name": "Base Environment",
+        "data": {
+          "base_url": "http://localhost:5000"
+        },
+        "dataPropertyOrder": {
+          "&": ["base_url"]
+        },
+        "color": null,
+        "isPrivate": false,
+        "metaSortKey": 1698753600000,
+        "_type": "environment"
+      }
+    ]
+  }

@@ -154,6 +154,8 @@ latest_code_context.txt
 
 # Cython debug symbols
 cython_debug/
+*.sh
+*.txt
 
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
